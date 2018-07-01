@@ -7,10 +7,10 @@ public class UsuarioRol {
 	@Column(name="id_usuario_rol")
 	private int idUsuarioRol; 
 	
-	@OneToMany(mappedBy="id_usuario")
+	@ManyToOne(columnName="id_usuario")
 	private Usuario usuario; 
 	
-	@OneToMany(mappedBy="id_rol")
+	@ManyToOne(columnName="id_rol")
 	private Rol rol; 
 
 	public Rol getRol()

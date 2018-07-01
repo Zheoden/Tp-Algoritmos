@@ -7,10 +7,10 @@ public class RolAplicacion {
 	@Column (name="id_rol_aplicacion")
 	private int idRolAplicacion; 
 	
-	@OneToMany(mappedBy="id_rol") 
+	@ManyToOne(columnName="id_rol") 
 	private Rol rol; 
 	
-	@OneToMany(mappedBy="id_aplicacion") 
+	@ManyToOne(columnName="id_aplicacion") 
 	private Aplicacion aplicacion; 
 	
 	// constructores, setters y getters }

@@ -18,23 +18,23 @@ public class Test
 		Connection con = UtnConnectionFactory.getConnection();
 		
 		// verifico el find
-		Usuario p = Utn.find(con,Usuario.class,1);
-		Assert.assertEquals(p.getUsername(),"jschiffer");
+		Usuario p = Utn.find(con,Usuario.class,2);
+		Assert.assertEquals(p.getUsername(),"jschiffer1");
 
 		// persona es LAZY => debe permanecer NULL hasta que haga el get
 		Assert.assertNull(p.persona);
 
-		Assert.assertEquals((Integer)p.getPersona().getIdPersona(),(Integer)1);
+		Assert.assertEquals((Integer)p.getPersona().getIdPersona(),(Integer)8);
 
 		// debe traer el objeto
 		Persona o = p.getPersona();
 		Assert.assertNotNull(o);
 	
 		// verifico que lo haya traido bien
-		Assert.assertEquals(o.getNombre(),"Analia");
+		Assert.assertEquals(o.getNombre(),"Micaela");
 		
 		// verifico que venga bien...
-		Assert.assertEquals(o.getDireccion(),"Bogota");
+		Assert.assertEquals(o.getDireccion(),"Bolivia");
 		
 		// tipoOcupacion (por default) es EAGER => no debe ser null
 //		Assert.assertNotNull(o.getTipoOcupacion());
@@ -49,7 +49,7 @@ public class Test
 		Assert.assertNotNull(roles);
 		
 		// debe tener 2 elementos
-		Assert.assertEquals(roles.size(),2);
+		Assert.assertEquals(roles.size(),1);
 		
 		for(UsuarioRol pd:roles)
 		{
@@ -67,6 +67,6 @@ public class Test
 	@org.junit.Test
 	public void testXQL() throws SQLException, IllegalAccessException, InstantiationException, NoSuchMethodException, InvocationTargetException, IOException {
 		Connection con = UtnConnectionFactory.getConnection();
-		Utn.query(con, Persona.class, "$ocupacion.tipoOcupacion.descripcion LIKE ?", "Profesional");
+		Utn.query(con, Usuario.class, "$persona.nombre LIKE ?", "Analia");
 	}
 }

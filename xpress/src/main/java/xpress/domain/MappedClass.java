@@ -102,11 +102,6 @@ public class MappedClass
                             joins += lazyField.getJoins(alias, false);
                         }
                     }
-
-                    if (getClassFields().containsKey(s.substring(1, s.indexOf(".")))) {
-
-                    }
-
                 }
                 catch (Exception ex){ }
             }
