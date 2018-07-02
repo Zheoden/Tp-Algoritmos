@@ -6,9 +6,7 @@ import java.util.List;
 
 import xpress.ann.Column;
 
-/**
- * Created by TATIANA on 22/4/2017.
- */
+
 public class ClassField {
     public static int LAZY = Column.LAZY;
     public static int EAGER = Column.EAGER;

@@ -2,9 +2,7 @@ package xpress.util;
 
 import java.util.List;
 
-/**
- * Created by TATIANA on 24/4/2017.
- */
+
 public class StringUtil {
 
     public static String join (List<String> lst, String joiner){

@@ -8,9 +8,7 @@ import xpress.UtnConnectionFactory;
 
 import java.lang.reflect.Method;
 
-/**
- * Created by TATIANA on 29/5/2017.
- */
+
 public class LazyInterceptor implements MethodInterceptor {
 
     private MappedClass mappedClass;

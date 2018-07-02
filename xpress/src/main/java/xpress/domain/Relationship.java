@@ -6,9 +6,6 @@ import xpress.util.StringUtil;
 
 import java.lang.reflect.Field;
 
-/**
- * Created by TATIANA on 23/4/2017.
- */
 public class Relationship {
     public static int RELATION = 1;
     public static int LAZY_COLUMN = 2;

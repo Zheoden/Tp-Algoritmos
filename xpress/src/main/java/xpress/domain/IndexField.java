@@ -4,9 +4,7 @@ import java.lang.reflect.Field;
 
 import xpress.ann.Id;
 
-/**
- * Created by TATIANA on 23/4/2017.
- */
+
 public class IndexField extends ClassField {
 
     private Boolean identity = false;
